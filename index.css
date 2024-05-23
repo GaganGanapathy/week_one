@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+h3 + button {
+  margin-left: auto;
+}
+
+.shopping_icon {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #afdbf5;
+  width: 40px;
+  height: 40px;
+}
+
+.number_of_items {
+  position: absolute;
+  color: white;
+  top: 0;
+  background-color: #0000ff;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  transform: translate(15%, -34%);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.product_detail {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
+  /* height: 300px; */
+}
+
+img {
+  object-fit: contain;
+}
+
+.products {
+  display: grid;
+  row-gap: 20px;
+  justify-content: center;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description_section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.tittle,
+.price_number {
+  font-weight: 600;
+}
+
+.price_colour {
+  color: #dbd7d2;
+}
+
+.add_to_cart {
+  height: fit-content;
+  border: none;
+  background-color: #0000ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.modal {
+  width: 85%;
+  border: 0;
+  border-radius: 15px;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.product {
+  border: 1px solid grey;
+  display: flex;
+  padding: 5px 10px;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.add_less {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.font {
+  font-size: larger;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+}
+
+@media (425px < width <=768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product_detail {
+    justify-self: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+  }
+  .product_detail {
+    justify-self: center;
+  }
+  .modal {
+    width: 50%;
+  }
+}
